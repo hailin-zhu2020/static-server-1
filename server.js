@@ -35,6 +35,7 @@ var server = http.createServer(function(request, response){
     '.png':'image/png',
     '.jpg':'image/jpeg'
   }
+  //'text/html'为文件类型保底值
   response.setHeader('Content-Type', `${fileTypes[suffix]||'text/html'};charset=utf-8`)
   //处理异常
   let content
